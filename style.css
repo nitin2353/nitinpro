@@ -1,5 +1,50 @@
-#line{
-	border: 2px solid black;
-	height: 80%;
-	width: 70%;	
+body{
+    background-color: #13102e;
+}
+.head{
+    justify-content: center;
+    display: flex;
+    font-size: 30px;
+}
+.head h1{
+
+    text-shadow: 0 0 10px white;
+}
+.card{
+    border: 10px inset white;
+    height: 40%;
+    width: 15%;
+    display: inline-block;
+    margin-left: 90px;
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+    
+    
+}
+#img{
+    height: 300px;
+    width: 220px;
+}
+.uper{
+    position: absolute;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    width: 100%;
+    height: 0%;
+    bottom: 0;
+    justify-content: center;
+    display: flex;
+    transition: .5s ease;
+    font-size: 0px;
+
+}
+.card:hover .uper{
+    margin-top: 50%;
+    height: 100%;
+   font-size: 40px;
+   font-family: bold;
+   text-shadow: 0 0 10px white;
+   cursor: pointer;
+   
 }

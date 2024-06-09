@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<style>
+		.body{
+			border: 2px solid black;
+			height: 70% !important;
+			width: 40%;	
+			background: green;
+			color: white;
+			size: fixed;
+
+		}
+		.ss{
+			height: 40px;
+			width: 97.4%;
+			font-size: 20px;
+		}
+		.screen{
+			border: 2px solid black;
+			height: 10% !important;
+			width: 92%;	
+			margin: 10px; 
+		}
+		.buttons{
+			border: 2px solid black;
+			height: 10% !important;
+			width: 93%;	
+			margin: 10px; 
+		}
+		td{
+			border: 2px solid black;
+			width: 60px !important;
+			background: black
+		}
+		table tr td h3{
+			margin-left: 0px;
+		}
+		table tr td h3 input{
+			height: 100%;
+			width: 100%;
+			font-size: 30px;
+			background: red;
+			border: 0;
+		}
+		.center{
+			margin-left: 40%;
+		}
+	</style>
+</head>
+<body>
+	<div class="center">
+	<h1 style="margin-left: 90px;">Calculator</h1>
+	<div class="body">
+			<div class="screen">
+			
+					<input type="text"id="total" class="ss">
+			</div>
+			<div class="buttons">
+				<table>
+					<tr>
+						<td><h3><input type="button" value="1" id="num" onclick="conc(1)"></h3></td>
+						<td><h3><input type="button" value="2" id="num" onclick="conc(2)"></h3></td>
+						<td><h3><input type="button" value="3" id="num" onclick="conc(3)"></h3></td>
+						<td><h3><input type="button" value="+" id="num1" onclick="char('+')"></h3></td>
+						<td><h3><input type="button" value="=" id="num1" onclick="char('=')"></h3></td>
+
+
+					</tr>
+					<tr>
+						<td><h3><input type="button" value="4" id="num" onclick="conc(4)"></h3></td>
+						<td><h3><input type="button" value="5" id="num" onclick="conc(5)"></h3></td>
+						<td><h3><input type="button" value="6" id="num" onclick="conc(6)"></h3></td>
+						<td><h3><input type="button" value="-" id="num1" onclick="char('-')"></h3></td>
+						<td><h3><input type="button" value="/" id="num1" onclick="char('/')"></h3></td>
+
+
+					</tr>
+					<tr>
+						<td><h3><input type="button" value="7" id="num" onclick="conc(7)"></h3></td>
+						<td><h3><input type="button" value="8" id="num" onclick="conc(8)"></h3></td>
+						<td><h3><input type="button" value="9" id="num" onclick="conc(9)"></h3></td>
+						<td><h3><input type="button" value="*" id="num1" onclick="char('*')"></h3></td>
+						<td><h3><input type="button" value=0   id="num" onclick="conc(0)"></h3></td>
+
+					</tr>
+				</table>
+			</div>
+	</div>
+
+</div>
+
+<script>
+		let a=0;
+		let i=0;
+		let temp=[];
+		let tot=0;
+
+		function conc(a){
+			a + document.getElementById("num").value;
+			temp[i]=document.getElementById("total").value += a;
+		}
+
+		function char(b){
+ 			if( b =='+'){
+ 				i++;
+ 				temp[i]='+';
+ 				document.getElementById("total").value = b;
+			 	//document.write(temp)
+			 }
+			 else if(b =='-'){
+			 	i++;
+ 				temp[i]='-';
+ 				document.getElementById("total").value = b;
+			 }
+			 else if(b =='*'){
+			 	i++;
+ 				temp[i]='*';
+ 				
+ 				document.getElementById("total").value = b;
+			}
+			 else if(b =='/'){
+			 	i++;
+ 				temp[i]='/';
+ 				document.getElementById("total").value = b;
+			 }
+			 else if(b=='='){
+				for ( j = 0 ; j <= temp.length-1; j++) {
+					 tot += parseInt(temp[j]);
+					document.getElementById("total").value = tot; 
+				}
+			}	
+		}
+		
+		
+</script>
+<script>
+
+	function write(){
+		const answer = "Delhi";
+		const ans = document.QuerySelector("input:checked").value;
+		if(ans === answer){
+
+				document.getElementById('real').textContent = "Correct";
+		}
+		else{
+				document.getElementById('real').textContent = "Wrong";
+		}
+	}
+</script>
+</body>
+</html>
