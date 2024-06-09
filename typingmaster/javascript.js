@@ -14,7 +14,7 @@ function ti(){
 }
 let j=0;
 function dis(){
-        setInterval(display, 100)   
+        setInterval(display, 1000)   
             function display(){
                 document.getElementById('timer').value =`${j}:${(i>=0 && i<=9)?"0":""}${i++}`;
                 document.getElementById('myselect').setAttribute('disabled','');
