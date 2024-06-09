@@ -42,7 +42,7 @@ body{
 .card:hover .uper{
     margin-top: 50%;
     height: 100%;
-   font-size: 40px;
+   font-size: 30px;
    font-family: bold;
    text-shadow: 0 0 10px white;
    cursor: pointer;
