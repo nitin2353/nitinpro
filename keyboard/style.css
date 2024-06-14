@@ -1,0 +1,165 @@
+.keyboard{
+    border: 2px solid rgb(0, 0, 0);
+    height: 50%;
+    width: 100%;
+    padding-top: 20px;
+}
+h5{
+    position: absolute;
+    margin-left: 3px;
+    margin-top: 4px;
+}
+h1{
+    justify-content: center;
+    display: flex;  
+}
+.keyboard .row1 h5{
+    margin-top: 0px;
+}
+.keyboard .row1 div{
+    border: 1px solid black;
+    display: inline-block;
+    height: 20px;
+    width: 35px;   
+    margin-left: -1px;
+   
+}
+.row1{
+    margin-left: 7px !important;
+}
+.keyboard .row2 div{
+    border: 1px solid black;
+    display: inline-block;
+    height: 35px;
+    width: 31px;   
+    margin-left: 5px;
+    margin-top: -13px;
+}
+.keyboard .row3 div{
+    border: 1px solid black;
+    display: inline-block;
+    height: 35px;
+    width: 30px;   
+    margin-left: 5px;
+    margin-top: -16px;
+}
+.keyboard .row4 div{
+    border: 1px solid black;
+    display: inline-block;
+    height: 35px;
+    width: 30px;   
+    margin-left: 5px;
+    margin-top: -16px;
+}
+.keyboard .row5 div{
+    border: 1px solid black;
+    display: inline-block;
+    height: 35px;
+    width: 30px;   
+    margin-left: 5px;
+    margin-top: -16px;
+}
+.keyboard .row6 div{
+    border: 1px solid black;
+    display: inline-block;
+    height: 35px;
+    width: 30px;   
+    margin-left: 5px;
+    margin-top: -16px;
+}
+.keyboard .row1{
+    margin-left: 30px;
+}
+
+/* individually formating*/
+
+#row1-14, #row1-15, #row1-16 {
+    width: 44px;
+
+} 
+.row2{
+    margin-top: 30px;
+}
+#row2-14{
+    width: 85px;
+}
+#row3-1{
+    width:60px;
+}
+#row3-14{
+    width: 68px;
+}
+#row4-1{
+    width: 70px;
+}
+#row4-13{
+    width: 99px;
+}
+#row5-1{
+    width: 110px;
+}
+#row5-11{
+    width: 140px;
+}
+#row6-1{
+    width: 50px;
+}
+#row6-4{
+    width: 30%;
+}
+#row6-7{
+    width: 70px;
+}
+#row2-15,#row2-16,#row2-17,#row3-15, #row3-16,#row3-17{
+    width: 40px;
+
+}
+#row2-15{
+    margin-left: -4px;
+}
+#row3-15{
+    margin-left: -4px;
+}
+#row6-8, #row6-9, #row5-12, #row6-10{
+    width: 40px;
+}
+#row5-12{
+    margin-left: 10px;
+}
+#row6-8{
+    margin-left: -1px;
+}
+#row3-18{
+    margin-left: 7px;
+}
+#row2-18,#row2-19,#row2-20,#row2-21,#row3-18,#row3-19,#row3-20, #row3-21,#row4-14,#row4-15,#row4-16,#row5-13,#row5-14,#row5-15,#row5-16{
+    width: 40px;
+}
+#row4-14{
+    margin-left: -7px;
+}
+#row5-13{
+    margin-left: 15px;
+}
+#row6-11{
+    margin-left: 2px;
+    width: 93px;
+}
+#row6-12{
+    width: 40px;
+}
+#row3-21{
+    position: absolute;
+    height: 76.3px;
+    margin-left: 09px;
+}
+#row5-16{
+    position: absolute;
+    height: 77px;
+    margin-left: 10px;
+}
+
+/* Fomrating */
+ div{
+     background: rgb(61, 166, 207);
+ }
