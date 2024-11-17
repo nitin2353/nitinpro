@@ -1,0 +1,262 @@
+body{
+    background: rgb(6, 6, 56);
+}
+.edits{
+    border: 2px solid rgb(93, 8, 252);
+    width: 100vw;
+    margin-left: 12px;
+    padding-top: 0px;
+    border-radius: 20px;
+    margin-top: 36vh !important;
+    z-index: 3;
+    padding: 20px;
+
+}
+.edits2{
+    border: 2px solid rgb(93, 8, 252);
+    width: 100vw;
+    margin-left: 12px;
+    padding-top: 0px;
+    border-radius: 20px;
+    margin-top: 36vh !important;
+    z-index: 3;
+    padding: 20px;
+
+}
+
+/*-------------------------drag------------------*/
+.draggable,.sticker_drag{
+    position: absolute;
+    cursor: all-scroll;
+    display: none;
+}
+/*-------------------------drag------------------*/
+#new::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+#new{
+    margin-top: 100px;
+    height: 40px !important;
+    background: rgb(157, 28, 218);
+    color: white;
+    border-radius: 20px;
+    justify-content: center;
+    padding-top: 3px;
+    background-color: rgb(85, 35, 165); /* Fallback color */
+    background-color: rgba(100, 24, 161, 0.4);
+    border: 2px solid white;
+}
+
+table tr th{
+    font-size: 30px;
+    color: rgb(80, 79, 144);
+    display: inline-block;
+    justify-content: center;
+    margin-bottom: 20px; 
+    padding-left: 60px;  
+    height: 50px; 
+    padding-top: 10px;
+}
+table{
+    padding-right: 0px;
+    justify-content: center;
+    display: inline;
+}
+ table tr label{
+    margin-right: 50px;
+    font-size: 10px;
+    
+}
+th:hover{
+    color:rgb(102, 17, 212);
+    background: rgb(15, 15, 110);  
+    
+}
+.popup{
+    border: 2px solid white ;
+    height: 60%;
+    width: 20%;
+    margin-top: -34%;
+    background: rgb(102, 17, 212);
+    margin-left: 77%;
+    position: absolute;
+    display: none !important;
+    
+}
+.popup h4{
+    margin-left: -50%;
+    display: inline;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+#border_type{
+    margin-left: 10px;
+}
+#border_type button{
+    margin-left: 4px;
+    width: 70px;
+    margin-top: 10px;
+    border-radius: 30px;
+    font-family: bold;
+    border-color: rgb(102, 17, 212);
+}
+#border_type button:hover{
+    background-color: #663ac7;
+    color: white;
+    border: 1px solid white;
+}
+#bdr_typ{
+    color: white;
+    padding-top: 10px;
+    margin-bottom: -8px;
+}
+#text_edt{
+    margin-top: 30px;   
+}
+
+#text_edt button{
+    width: 100px !important;
+    height: 40px;
+    border:1px solid white;
+    border-radius: 50px;
+    font-size : 15px;  
+    background: #663ac7;
+    color: white;
+}
+
+#textColor{
+    border:none;
+    color: white;
+    position: absolute;
+    display: inline;
+    /* transform: rotate(20deg); */
+}
+#show_fontSize,#show_fontdeg{
+    display: inline;
+    margin-left: 20px;
+}
+
+/*------------------------sticker----------------- */
+
+.stickers{
+        margin-left: 78px;
+        margin-top: 10px;
+}
+.stickers div button{
+    width: 102% !important;
+    font-size: 15px;
+    font-family: bold;
+    color: white;
+    border:1px solid white;
+    background-color: #663ac7;
+    border-radius: 50px;
+    display: block;
+    margin-top: 10px;
+    /* margin-right: -150px; */
+}
+.stickers div{
+    margin-left: -60px; 
+    margin-top: 20px;
+    margin-right: 160px;    
+}
+.stick_range{
+    width: 60%;
+    display: inline;
+    margin-top: -35% !important;
+    margin-left: 30px;
+}
+#stick_size{
+    margin-top: -45%;
+    margin-left: 70px;
+    position: absolute;
+}
+#stick_rem{
+    width: 50% !important;
+    font-size: 15px;
+    font-family: bold;
+    color: white;
+    border:1px solid white;
+    background-color: #663ac7;
+    border-radius: 50px;
+    display: block;
+    margin-top: -14%;
+    margin-left: 35%;
+}
+#stick_img{
+    width: 143%;
+    margin-top: 50px;
+    margin-left: -65px; 
+    padding-right: 20%;
+}
+#stick_img img{
+    width: 25%;
+    height: auto;
+    display: inline;
+    margin: 8px;
+    border: 1px solid white;
+}
+#stick_drag{
+    width: 60px;
+    height: auto;
+}
+#sticker_drag{
+    width: auto;
+}
+#draggable{
+    width: 450px !important;
+    padding-right: 300px !important;
+}
+.stic_cat1,.stic_cat2,.stic_cat3,.stic_cat4{
+    display: none;
+}
+
+
+/*---------------------------------Effects--------------------------------*/
+
+.effects h4 , .adjest h4{
+        margin-left: 0px;
+        margin-top: 10px;
+}
+#temp_eff{
+    margin-left: -6px;
+}
+#temp_eff img{
+    width: 70px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+/*--------------------------------adjest------------------------------------*/
+
+.adjeest_elements h4{
+    font-size: 15px;
+    margin-left: -70%;
+    margin-top: 10%;
+}
+.adjeest_elements input{
+    margin-left: 30%;
+    margin-top: -8%;
+}
+.aje_show{
+    margin-top: -126%;
+}
+.aje_show p{
+    margin-top: 11%;
+    margin-left: 27%;
+    color: white;
+}
+
+/* save button */
+
+.takeImageBtn{
+    height: 7%;
+    width: 3.5%;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 3px solid white;
+    margin-left: 95%;
+    margin-bottom: -1% !important;
+    color: white;
+    font-size: 20px !important;
+}

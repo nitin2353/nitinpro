@@ -1,0 +1,210 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picss</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<!-- <button onclick="saveImage()" ><i class="bi bi-download"></i></button> -->
+        
+
+       
+
+        <div class="image-preview">
+
+            <!-- Canvas that will hold the 
+            image to be edited -->
+            <canvas id="canvas" height="0"></canvas>
+        </div>
+    <div class="row  text-center mt-5 w-100" >
+        <div class="col-lg-12"  id="test">
+            <a id="link"></a>
+           <input type="file" accept="image/*" onchange="uploadImage(event)" id="new">
+           <!-- <input class="file-path" type="text"> -->
+           <div>
+            <img id="sourceImage" crossorigin="anonymous"  id="output" class="bor" style="margin-bottom: -96px !important;">
+           </div>
+
+           <div id="draggable" class="draggable" onclick="edit1()">
+            <span id="textColor" contenteditable="true">Write Here</span>
+            </div>
+            <div id="sticker_drag" class="sticker_drag" onclick="edit4()">
+                <img  id="stick_drag"/>
+            </div>
+        </div>
+    </div>
+    <div class="row  text-center mt-5  w-100">
+        <div class="col-lg-12 edits " id="edit-1">
+            <table>
+                <tr>
+                    <th onclick="edit1()"><i class="bi bi-fonts"></i><label>Text</label></th>
+                    <th onclick="edit2()"><i class="bi bi-sliders2"></i><label>Adjest</label></th>
+                    <th onclick="edit3()"><i class="bi bi-emoji-smile"></i><label>Effects</label></th>
+                    <th onclick="edit4()"><i class="bi bi-stickies"></i><label>Sticker</label></th>
+                    <th onclick="edit5()"><i class="bi bi-border-all"></i><label>Border</label></th>
+                </tr>
+                <div class="popup">
+<!---------------------------------------- Edit 1 starting----------------------------------------->
+                   <div class="text">
+                        <h4  style="margin: 10px;"> Color:</h4>
+                        <hr style="color: white;"/>
+                        <input  style="margin: 10px;"  type="color" id="myColor" value="#ffffff">
+                        <h4  style="margin: 10px; ">Font Size:</h4>
+                        <input type="range" value="10" id="getSizeOfText">
+                        <h4 id="show_fontsize">10 per</h4>
+                        <h4  style="margin: 10px;">Roation:</h4>
+                        <input type="range" value="0" min="0" max="360" id="rotationOfText">
+                        <h4 id="show_fontdeg">0 deg</h4>
+                        <div id="text_edt">
+                            <button id="add" onclick=" text_add()">Add</button>
+                            <button id="remove" onclick=" text_rem()">Remove</button>
+                        </div>
+                   </div>
+ <!---------------------------------------- Edit 5 starting----------------------------------------->
+                   <div class="borders">
+                    
+                        <h4 style="margin: 10px;">Border Size:</h4>
+                        <hr style="color: white;"/>
+                        <input type="range" class="border_range" min="1" max="100" value="10"  style="margin: 10px;">
+                        <h4  style="margin: 10px;"> Color:</h4>
+                        <input  style="margin: 10px;"  type="color" id="border_color" value="#ffffff">
+                        <h4 style="margin:5px;">Border Type <h6 id="bdr_typ"> </h6></h4>
+                        <div id="border_type">
+                            <button selected id="btn_colr1" onclick="b(1)">Solid</button>
+                            <button id="btn_colr2" onclick="b(2)">Dotted</button>
+                            <button id="btn_colr3" onclick="b(3)">Double</button>
+                            <button id="btn_colr4" onclick="b(4)">Dashed</button>
+                            <button id="btn_colr5" onclick="b(5)">Groove</button>
+                            <button id="btn_colr6" onclick="b(6)">Ridge</button>
+                            <button id="btn_colr7" onclick="b(7)">Outset</button>
+                            <button id="btn_colr8" onclick="b(8)">Inset</button>
+                            <button id="btn_colr9" onclick="b(9)">Remove</button>
+                        </div>
+                   </div>
+<!---------------------------------------- Edit 4 starting----------------------------------------->
+                   <div class="stickers">
+                            <h4>Stickers</h4>
+                            <hr style="color: white; margin-left: -80px;"/>
+                            <div>
+                                    <button onclick="s_cat(1)">Sticks</button>
+                                    <button onclick="s_cat(2)">Flower</button>
+                                    <button onclick="s_cat(3)">GoodMor</button>
+                                    <button onclick="s_cat(4)">GoodNig</button> 
+                            </div>
+                            <h4 id="stick_size">50px</h4>
+                            <input type="range" min="0" max="300" value="50" class="stick_range">
+                            <button id="stick_rem" onclick="stick_rem()">Remove</button>
+                            <div id="stick_img" class="stic_cat1">
+                                <img src="stickers\s6.png" alt="notfound" onclick="s1(6)"  id="stick1">
+                                <img src="stickers\s5.png" alt="notfound" onclick="s1(5)" id="stick2">
+                                <img src="stickers\s1.png" alt="notfound" onclick="s1(1)"  id="stick3">
+                                <br/>
+                                <img src="stickers\s2.png" alt="notfound" onclick="s1(2)"  id="stick4">
+                                <img src="stickers\s3.png" alt="notfound" onclick="s1(3)"  id="stick5">
+                                <img src="stickers\s4.png" alt="notfound" onclick="s1(4)"  id="stick6">  
+                            </div> 
+
+                            <div id="stick_img" class="stic_cat2">
+                                <img src="stickers\s3.png" alt="notfound" onclick="s1(3)"  id="stick3">
+                                <img src="stickers\s5.png" alt="notfound" onclick="s1(5)" id="stick5">
+                                <img src="stickers\s8.png" alt="notfound" onclick="s1(8)"  id="stick8">
+                                <!-- <br/>
+                                <img src="stickers\s2.png" alt="notfound" onclick="s1(4)"  id="stick4">
+                                <img src="stickers\s3.png" alt="notfound" onclick="s1(5)"  id="stick5">
+                                <img src="stickers\s4.png" alt="notfound" onclick="s1(6)"  id="stick6">   -->
+                            </div>  
+                            
+                            <div id="stick_img" class="stic_cat3">
+                                <img src="stickers\s4.png" alt="notfound" onclick="s1(4)"  id="stick1">
+                                <img src="stickers\s9.png" alt="notfound" onclick="s1(9)" id="stick2">
+                                <img src="stickers\s6.png" alt="notfound" onclick="s1(6)"  id="stick3">
+                                <br/>
+                                <img src="stickers\s7.png" alt="notfound" onclick="s1(7)"  id="stick4">
+                                <img src="stickers\s10.png" alt="notfound" onclick="s1(10)"  id="stick5"> 
+                                <!-- <img src="stickers\s7.png" alt="notfound" onclick="s1(4)"  id="stick4"> -->
+                            </div> 
+
+                            <div id="stick_img" class="stic_cat4">
+                                <img src="stickers\s1.png" alt="notfound" onclick="s1(1)"  id="stick1">
+                                <img src="stickers\s2.png" alt="notfound" onclick="s1(2)" id="stick2">
+                                <img src="stickers\s8.png" alt="notfound" onclick="s1(8)"  id="stick3">
+                                <!-- <br/>
+                                <img src="stickers\s2.png" alt="notfound" onclick="s1(4)"  id="stick4">
+                                <img src="stickers\s3.png" alt="notfound" onclick="s1(5)"  id="stick5">
+                                <img src="stickers\s4.png" alt="notfound" onclick="s1(6)"  id="stick6">-->
+                            </div> 
+                               
+                   </div>
+<!---------------------------------------- Edit 2 starting-----------------------------------------> 
+                    <div class="effects">
+                        <h4>Effects</h4>
+                        <hr style="color: white;"/>
+                        <div id="temp_eff">
+                            <img src="image/temp.jpg" onclick="eff_change(1)" style="filter: sepia(100%);">
+                            <img src="image/temp.jpg" onclick="eff_change(2)" style="filter: saturate(8);">
+                            <img src="image/temp.jpg" onclick="eff_change(3)" style="filter: brightness(200%);">
+                            <br/>
+                            <img src="image/temp.jpg" onclick="eff_change(4)" style="filter: contrast(200%);">
+                            <img src="image/temp.jpg" onclick="eff_change(5)" style="filter: drop-shadow(8px 8px 10px gray);">
+                            <img src="image/temp.jpg" onclick="eff_change(6)" style="filter: grayscale(100%);">
+                            <br/>
+                            <img src="image/temp.jpg" onclick="eff_change(7)" style="filter: hue-rotate(90deg);">
+                            <img src="image/temp.jpg" onclick="eff_change(8)" style="filter: invert(100%);">
+                            <img src="image/temp.jpg" onclick="eff_change(9)" style="filter: opacity(30%);">
+                            <br/>
+                            <img src="image/temp.jpg" onclick="eff_change(10)" style="filter:  blur(5px);">
+                            <img src="image/temp.jpg" onclick="eff_change(11)" style="filter: contrast(200%) brightness(150%);">
+                            <img src="image/temp.jpg" onclick="eff_change(12)" style="filter: none;">
+                        </div>
+                    </div>
+<!---------------------------------------- Edit 3 starting----------------------------------------->
+                    <div class="adjest">
+                        <h4>Adjest</h4>
+                        <hr style="color: white;"/>
+                        <div class="adjeest_elements">   
+                                <h4>Brightness</h4>
+                                <span><input type="range" min="0" max = "200" value="100" oninput="fun1()" class="get_adj1"></span>
+                                <h4>Contrast</h4>
+                                <span><input type="range" min="0" max = "200" value="100" oninput="fun2()" class="get_adj2"></span>
+                                <h4>Sautrate</h4>
+                                <span><input type="range" min="0" max = "100" value="0"  oninput="fun3()"  class="get_adj3"></span>
+                                <h4>Grayscale</h4>
+                                <span><input type="range" min="0" max = "100" value="0"   oninput="fun4()" class="get_adj4"></span>
+                                <h4>Opacity</h4>
+                                <span><input type="range" min="0" max = "100" value="100"   oninput="fun5()" class="get_adj5"></span>
+                                <h4>Blur</h4>
+                                <span><input type="range" min="0" max = "100" value="0"  oninput="fun6()"  class="get_adj6"></span>
+                                <div class="aje_show">
+                                        <p id="c_adj1">0</p>
+                                        <p id="c_adj2">0</p>
+                                        <p id="c_adj3">0</p>
+                                        <p id="c_adj4">0</p>
+                                        <p id="c_adj5">100</p>
+                                        <p id="c_adj6">0</p>
+                                </div>
+                        </div>
+                    </div>
+<!------------------------------------------- Key End---------------------------------------------->
+                </div>
+            </table>
+        </div>
+        
+    </div>
+
+    <!-- <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.7/dist/html2canvas.min.js"></script> -->
+    <script src="js.js"></script>
+    <!-- <script src="html2canvas.js"></script> -->
+
+    
+</body>
+</html>
